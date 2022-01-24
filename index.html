@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="intro">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="https://vadimkurkin.com/" class="header__link" target="_blank">
+                        <img src="img/logo.png" alt="Образовательный центр Вадима Куркина">
+                    </a>
+                    <div class="header__call">
+                        <div class="header__call--img">
+                            <svg>
+                                <use href="sprite.svg#call"></use>
+                            </svg>
+                        </div>
+                        <div class="header__call--item">
+                            <a class="header__call--item__number" href="tel:88002347375">8 (800) 234-73-75</a>
+                            <span>бесплатно по России</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__inner--item">
+                    <a href="#cauch" class="intro__link">сессия<br> с коучем</a>
+                </div>
+                <div class="intro__inner--item">
+                    <a href="#therapy" class="intro__link">сессия<br> с терапевтом</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="page" id="cauch">
+        <p class="text">Это страница про коучинг</p>
+    </div>
+    <div class="page" id="therapy">
+        <p class="text">Это станица про сессии с терапевтом</p>
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function($) {
+            $('.intro__link').on("click",function(event) {
+                let key = event.target.id;
+                console.log(key);
+            });
+        });
+    </script>
+</body>
+</html>
