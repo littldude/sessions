@@ -32,19 +32,23 @@
         <div class="container">
             <div class="intro__inner">
                 <div class="intro__inner--item">
-                    <a href="#cauch" class="intro__link">сессия<br> с коучем</a>
+                    <a href="#cauch__page" id="cauch" class="intro__link">сессия<br> с коучем</a>
                 </div>
                 <div class="intro__inner--item">
-                    <a href="#therapy" class="intro__link">сессия<br> с терапевтом</a>
+                    <a href="#therapy__page" id="therapy" class="intro__link">сессия<br> с терапевтом</a>
                 </div>
             </div>
         </div>
     </section>
-    <div class="page" id="cauch">
-        <p class="text">Это страница про коучинг</p>
+    <div class="page" id="cauch__page">
+        <section class="cauch__intro">
+            <h1 class="title">Привет, это страница про коучинг</h1>
+        </section>
     </div>
-    <div class="page" id="therapy">
-        <p class="text">Это станица про сессии с терапевтом</p>
+    <div class="page" id="therapy__page">
+        <section class="therapy__intro">
+            <h1 class="title">Привет, это страница про сессии с терапевтом</h1>
+        </section>
     </div>
 
     
@@ -53,9 +57,34 @@
         $(document).ready(function($) {
             $('.intro__link').on("click",function(event) {
                 let key = event.target.id;
-                console.log(key);
+                if (key == 'cauch') {
+                    document.getElementById('cauch__page').style.display = 'block';
+                    document.getElementById('therapy__page').style.display = 'none';
+                } 
+                else {
+                    document.getElementById('therapy__page').style.display = 'block';
+                    document.getElementById('cauch__page').style.display = 'none';
+                }
             });
         });
     </script>
+
+<script>
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+    
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+    
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+    </script> 
 </body>
 </html>

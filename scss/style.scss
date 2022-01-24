@@ -154,11 +154,28 @@ a {
     font-size: 24px;
     color: $dark;
 }
-#cauch {
+#cauch__page {
     display: none;
     text-align: center;
 }
-#therapy {
+#therapy__page {
     display: none;
+    text-align: center;
+}
+.cauch {
+    &__intro {
+        padding: 40px 0;
+        background-color: rgb(105, 138, 113);
+    }
+}
+.therapy {
+    &__intro {
+        padding: 40px 0;
+        background-color: rgb(179, 131, 151);
+    }
+}
+.title {
+    color: #ffffff;
+    font-size: 24px;
     text-align: center;
 }
