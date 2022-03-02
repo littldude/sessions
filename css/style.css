@@ -7,17 +7,16 @@
 body {
   margin: 0;
   font-family: "Steinbeck";
-  font-weight: 400;
-  color: #ffffff;
+  color: #252B31;
 }
 
-p {
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p, ul, li {
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 a {
@@ -31,105 +30,290 @@ a {
   src: url("../fonts/The Temporary State - Steinbeck-Regular.ttf");
   font-display: swap;
 }
+@font-face {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Geometria.woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geometria";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Geometria-Italic.woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Geometria-Bold.woff");
+  font-display: swap;
+}
 .container {
   width: 1180px;
   margin: 0 auto;
 }
 
-.header {
-  padding: 18px 0 14px 0;
-  border-bottom: 4px solid rgba(255, 255, 255, 0.05);
+#cauch__page {
+  display: none;
+  background-color: #ffffff;
 }
-.header__inner {
+
+#therapy__page {
+  display: none;
+  background-color: #fff;
+}
+
+.open {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  background-color: #FFA3A3;
+  transition: 0.3s linear;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
 }
-.header__link {
+.open:hover {
+  background-color: #252B31;
+}
+.open span {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 1px;
+  background-color: #ffffff;
+  transition: 0.3s linear;
+}
+.open span::after {
+  content: "";
   display: block;
-  width: 180px;
   height: 37px;
+  width: 1px;
+  background-color: #ffffff;
+  z-index: 100;
 }
-.header__link img {
-  display: block;
-  width: 100%;
-  height: 100%;
+.open--rotate {
+  background-color: #FFA3A3;
 }
-.header__call {
+.open--rotate span {
+  transform: rotate(45deg);
+  transition: 0.3s linear;
+}
+.open--rotate span::after {
+  transition: 0.3s linear;
+}
+.open--active {
+  background-color: #252B31;
+}
+.open--active span {
+  transform: rotate(45deg);
+  transition: 0.3s linear;
+}
+.open--active span::after {
+  transform: translateX(-50%);
+}
+.open--active--rotate {
+  background-color: #FFA3A3;
+}
+.open--active--rotate span {
+  transform: rotate(90deg);
+  transition: 0.3s linear;
+}
+.open--active--rotate span::after {
+  transition: 0.3s linear;
+}
+
+.title {
+  font-size: 65px;
+  line-height: 80px;
+  font-weight: 400;
+}
+.title--request {
+  width: 80%;
+}
+
+.subtitle {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 44px;
+}
+
+.item {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.item__inner--help {
+  padding: 60px 80px 60px 95px;
+}
+.item__inner--help__bottom {
+  margin-top: auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.list__item {
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  margin-right: 65px;
 }
-.header__call--img {
-  display: block;
-  width: 26px;
-  height: 26px;
-}
-.header__call--img svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  fill: #ffffff;
-}
-.header__call--item {
+.list__item::before {
+  content: "";
   display: flex;
-  flex-direction: column;
-  margin-left: 13px;
-  font-size: 22px;
+  flex: 0 0 auto;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #252B31;
+  margin-right: 10px;
 }
-.header__call--item__number {
-  display: block;
+.list__item:last-child {
+  margin-bottom: 0;
+}
+.list__help {
+  margin-bottom: 40px;
+}
+.list__cauch-autor {
+  margin-top: 30px;
+}
+
+.text {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #252B31;
+}
+.text--white {
   color: #ffffff;
 }
-.header__call--item span {
+.text--grey {
+  color: #ABABAB;
+}
+.text--bold {
+  font-weight: bold;
+}
+.text--center {
+  text-align: center;
+}
+.text--question {
+  margin-bottom: 20px;
+}
+.text--results {
+  margin-bottom: 25px;
+}
+.text--results:nth-child(2n) {
+  margin-bottom: 35px;
+}
+.text--italic {
+  font-style: italic;
+}
+
+.button {
   display: block;
+  width: 100%;
+  padding: 44px 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Geometria";
+}
+.button--green {
+  background-color: #5BC766;
+}
+.button--green:hover {
+  background-color: #252B31;
+  transition: 0.2s linear;
+}
+.button--pink {
+  background-color: #FFA3A3;
+}
+.button--pink:hover {
+  background-color: #252B31;
+  transition: 0.2s linear;
+}
+.button--dark {
+  background-color: #252B31;
+}
+.button--dark:hover {
+  background-color: #FFA3A3;
+  transition: 0.2s linear;
+}
+.button--buy {
+  width: 380px;
+  height: 120px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.header {
+  padding: 24px 0 15px 0;
+  background-color: #ffffff;
 }
 
 .intro {
   position: relative;
   overflow: hidden;
   height: 100vh;
-  background: linear-gradient(to right, #FF354D 50%, #252B31 50%);
-}
-.intro::before {
-  content: "";
-  background-image: url("../img/setka.png");
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 82px;
-  right: 2%;
+  background: linear-gradient(to right, #FFA3A3 50%, #5BC766 50%);
 }
 .intro__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 133px 0 152px 0;
 }
 .intro__inner--item {
-  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
   position: relative;
 }
-.intro__inner--item:hover {
-  transform: scale(1.04);
-  transition: 0.2s linear;
+.intro__inner--item:nth-child(2) {
+  width: 40%;
 }
-.intro__inner--item::after {
+.intro__inner--item:first-child::after {
   content: "";
   display: block;
+  width: 95px;
+  height: 95px;
+  background-image: url("../img/intro/therapy-img.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   position: absolute;
-  bottom: -100%;
+  bottom: calc(150px - 90%);
+  right: calc(95px - 25%);
+}
+.intro__inner--item:last-child::after {
+  content: "";
+  display: block;
+  width: 95px;
+  height: 95px;
+  background-image: url("../img/intro/cauch-img.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: calc(150px - 90%);
+  right: calc(95px - 25%);
 }
 .intro__link {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-family: "Steinbeck";
-  font-size: 55px;
-  line-height: 70px;
   color: #ffffff;
+  margin-bottom: 32px;
 }
 .intro__link::after {
   content: "";
@@ -139,34 +323,391 @@ a {
   height: 52px;
   background-image: url("../img/arrow.svg");
 }
-
-.text {
-  font-size: 24px;
-  color: #252B31;
+.intro__link:hover {
+  transform: scale(1.04);
+  transition: 0.2s linear;
 }
 
-#cauch__page {
-  display: none;
+.help {
+  padding: 100px 0 63px 0;
+}
+.help__inner {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.help__inner::before {
+  content: "";
+  background-image: url("../img/help/help-img.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex: 0 0 auto;
+  width: 154px;
+  height: 214px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -85px;
+}
+.help__inner--item {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.about {
+  padding: 63px 0 50px 0;
+}
+.about__inner {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about__inner--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  width: 48%;
+  height: 121px;
+  padding: 28px 50px;
+}
+.about__inner--item:nth-child(1), .about__inner--item:nth-child(2), .about__inner--item:nth-child(3), .about__inner--item:nth-child(4) {
+  margin-bottom: 20px;
+}
+.about__inner--item__cauch {
+  width: auto;
+  padding: 0;
+  height: 0;
 }
 
-#therapy__page {
-  display: none;
+.table__inner {
+  margin-top: 60px;
+}
+.table__inner--line {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px #CBCCCD solid;
+  padding: 30px 0;
+}
+.table__inner--line:last-child {
+  border-bottom: none;
+  padding: 30px 0 0 0;
+}
+.table__inner--line:first-child {
+  padding: 0 0 30px 0;
+}
+.table__inner--item:first-child {
+  width: 50%;
+}
+.table__inner--item:last-child {
+  width: 45%;
+  padding-right: 90px;
+}
+
+.people__inner {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.people__inner--item {
+  width: 24%;
+  padding: 27px 50px 47px 50px;
+  margin-bottom: 20px;
   text-align: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
-
-.cauch__intro {
-  padding: 40px 0;
-  background-color: #698a71;
-}
-
-.therapy__intro {
-  padding: 40px 0;
-  background-color: #b38397;
-}
-
-.title {
+.people__inner--item:nth-child(1), .people__inner--item:nth-child(3), .people__inner--item:nth-child(6) {
+  background-color: #5BC766;
   color: #ffffff;
-  font-size: 24px;
-  text-align: center;
 }
+.people__inner--item:nth-child(2), .people__inner--item:nth-child(5), .people__inner--item:nth-child(8) {
+  background-color: #ffffff;
+}
+.people__inner--item:nth-child(4), .people__inner--item:nth-child(7) {
+  background-color: #FFA3A3;
+}
+.people__inner--item img {
+  display: block;
+  width: 181px;
+  height: 181px;
+  margin-bottom: 21px;
+}
+
+.review__inner {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.review__inner--item {
+  width: 48%;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.review__inner--item__body {
+  padding: 32px 90px 30px 30px;
+}
+.review__inner--item__person {
+  display: flex;
+  align-items: center;
+}
+.review__inner--item__person img {
+  display: block;
+  margin-right: 24px;
+  width: 84px;
+  height: 84px;
+}
+.review__inner--item__bottom {
+  margin-top: auto;
+}
+.review__text {
+  padding: 30px 0 20px 0;
+}
+.review__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 43px 50px 42px 33px;
+}
+.review__button svg {
+  display: block;
+  width: 70px;
+  height: 15px;
+}
+
+.method {
+  padding: 50px 0;
+}
+.method__inner {
+  margin-top: 60px;
+}
+
+.question {
+  background-color: #5BC766;
+  padding: 60px 0;
+}
+.question__inner {
+  margin-top: 50px;
+  background-color: #FFFFFF;
+}
+.question__item {
+  border-bottom: 1px #000000 solid;
+}
+.question__item:last-child {
+  border-bottom: none;
+}
+.question__item--header {
+  display: flex;
+  justify-content: space-between;
+  padding: 31px 40px 26px 40px;
+}
+.question__item--body {
+  display: none;
+  padding: 0 41px 37px 40px;
+}
+.question__item--body__text {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.results {
+  padding: 100px 0 50px 0;
+}
+.results__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 58px;
+}
+.results__inner--how {
+  align-items: flex-end;
+  margin-top: 0;
+}
+.results__inner--item {
+  display: flex;
+  flex-direction: column;
+  padding: 41px 100px 57px 55px;
+  width: 55%;
+}
+.results__inner--item:last-child {
+  padding: 0;
+  width: auto;
+}
+
+.buy {
+  padding: 50px 0 193px 0;
+}
+.buy__inner {
+  margin-top: 40px;
+}
+
+.cauch-session__inner {
+  margin-top: 85px;
+  display: flex;
+  justify-content: space-between;
+}
+.cauch-session__inner--item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32%;
+  height: 319px;
+  padding: 30px 50px;
+  position: relative;
+}
+.cauch-session__inner--item:nth-child(1) {
+  align-self: flex-start;
+}
+.cauch-session__inner--item:nth-child(1)::after {
+  content: "";
+  background-image: url("../img/cauch/arrow-down-cauch.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  width: 130px;
+  height: 98px;
+  position: absolute;
+  top: -50px;
+  right: -80px;
+}
+.cauch-session__inner--item:nth-child(2) {
+  margin-top: 80px;
+  align-self: baseline;
+}
+.cauch-session__inner--item:nth-child(2)::after {
+  content: "";
+  background-image: url("../img/cauch/arrow-down-cauch.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  width: 130px;
+  height: 98px;
+  position: absolute;
+  top: -50px;
+  right: -80px;
+}
+.cauch-session__inner--item:nth-child(3) {
+  margin-top: 140px;
+  align-self: flex-end;
+}
+
+.cauch-autor__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  position: relative;
+}
+.cauch-autor__inner--item:nth-child(1) {
+  width: 60%;
+}
+.cauch-autor__inner--item:nth-child(2) {
+  width: 380px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: -115px;
+  z-index: 1;
+}
+.cauch-autor__inner--item:nth-child(2)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #5BC766;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  z-index: -1;
+}
+.cauch-autor__inner--item:nth-child(2) img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cauch-autor__quote {
+  margin-top: 60px;
+  display: flex;
+  width: 86%;
+}
+.cauch-autor__quote::before {
+  content: "";
+  display: flex;
+  flex: 0 0 auto;
+  width: 2px;
+  height: auto;
+  background-color: #5BC766;
+  margin-right: 30px;
+}
+
+.request {
+  padding: 90px 0 50px 0;
+}
+.request__inner {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.request__inner--item {
+  display: flex;
+  flex-direction: column;
+}
+.request__inner--item:last-child {
+  width: 45%;
+}
+.request__item {
+  padding: 45px 0;
+  border-bottom: 1px #CBCCCD solid;
+}
+.request__item:first-child {
+  padding: 0 0 45px 0;
+}
+.request__item:last-child {
+  padding: 45px 0 0 0;
+  border-bottom: none;
+}
+
+.cauch-results {
+  padding: 50px 0 110px 0;
+}
+.cauch-results__inner {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.cauch-results__inner--item {
+  width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 51px 60px 51px;
+  position: relative;
+}
+.cauch-results__inner--item::before {
+  content: "";
+  display: flex;
+  flex: 0 0 auto;
+  background-image: url("../img/cauch/cauch-results-check.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.cauch-buy__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

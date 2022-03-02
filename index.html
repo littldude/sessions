@@ -5,52 +5,613 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <title>Решим проблему мягко и экологично</title>
 </head>
 <body>
-    <section class="intro">
-        <header class="header">
-            <div class="container">
-                <div class="header__inner">
-                    <a href="https://vadimkurkin.com/" class="header__link" target="_blank">
-                        <img src="img/logo.png" alt="Образовательный центр Вадима Куркина">
-                    </a>
-                    <div class="header__call">
-                        <div class="header__call--img">
-                            <svg>
-                                <use href="sprite.svg#call"></use>
-                            </svg>
-                        </div>
-                        <div class="header__call--item">
-                            <a class="header__call--item__number" href="tel:88002347375">8 (800) 234-73-75</a>
-                            <span>бесплатно по России</span>
-                        </div>
-                    </div>
-                </div>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <p class="title">Решим проблему мягко и экологично</p>
             </div>
-        </header>
+        </div>
+    </header>
+    <section class="intro">
         <div class="container">
             <div class="intro__inner">
                 <div class="intro__inner--item">
-                    <a href="#cauch__page" id="cauch" class="intro__link">сессия<br> с коучем</a>
+                    <a href="#therapy__page" class="intro__link title">сессия<br> с терапевтом</a>
+                    <p class="subtitle text--white">Достижение целей</p>
+                    <ul class="intro__list">
+                        <li class="intro__list--item text text--white">в работе и карьере</li>
+                        <li class="intro__list--item text text--white">в бизнесе и обучении</li>
+                        <li class="intro__list--item text text--white">в финансах и доходах</li>
+                        <li class="intro__list--item text text--white">в общении с людьми</li>
+                    </ul>
                 </div>
                 <div class="intro__inner--item">
-                    <a href="#therapy__page" id="therapy" class="intro__link">сессия<br> с терапевтом</a>
+                    <a href="#cauch__page" class="intro__link title">сессия<br> с коучем</a>
+                    <p class="subtitle text--white">Исцеление травм</p>
+                    <ul class="intro__list">
+                        <li class="intro__list--item text text--white">в отношениях с людьми</li>
+                        <li class="intro__list--item text text--white">в отношениях с любимыми</li>
+                        <li class="intro__list--item text text--white">в отношениях с родителями</li>
+                        <li class="intro__list--item text text--white">в сфере чувств и эмоций</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <div class="page" id="cauch__page">
-        <section class="cauch__intro">
-            <h1 class="title">Привет, это страница про коучинг</h1>
+    <div class="therapy__page" id="therapy__page">
+        <section class="help">
+            <div class="container">
+                <h2 class="title">Определите, что вам важно сейчас, и выбирайте подходящий способ работы </h2>
+                <div class="help__inner">
+                    <div class="help__inner--item item">
+                        <div class="item__inner--help">
+                            <ul class="list list__help">
+                                <li class="list__item text">Обрести радость жизни</li>
+                                <li class="list__item text">Наладить отношения с родителями</li>
+                                <li class="list__item text">Разрешить конфликты в семье или с партнером</li>
+                                <li class="list__item text">Понять себя и свои эмоции, научиться их проживать</li>
+                                <li class="list__item text">Избавиться от обиды, вины, неприятных воспоминаний</li>
+                                <li class="list__item text">Разобраться, что мешает жить так, как хочется</li>
+                            </ul>
+                            <p class="text text--bold">Помогут индивидуальные сессии</p>
+                        </div>
+                        <div class="item__inner--help__bottom">
+                            <a href="#" class="button button--pink text--center">Пройти сессию с терапевтом</a>
+                        </div>
+                    </div>
+                    <div class="help__inner--item item">
+                        <div class="item__inner--help">
+                            <ul class="list list__help">
+                                <li class="list__item text">Определиться с профессией</li>
+                                <li class="list__item text">Успешно пройти обучение</li>
+                                <li class="list__item text">Получить повышение на работе</li>
+                                <li class="list__item text">Разобраться с бизнес-целями</li>
+                                <li class="list__item text">Увеличить доходы, повысить заработок</li>
+                                <li class="list__item text">Получить конкретный результат в личной жизни (выйти замуж, встретить достойного спутника и т.п.)</li>
+                            </ul>
+                            <p class="text text--bold">Поможет коучинг</p>
+                        </div>
+                        <div class="item__inner--help__bottom">
+                            <a href="#" class="button button--green text--center">Пройти сессию с коучем</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
-    <div class="page" id="therapy__page">
-        <section class="therapy__intro">
-            <h1 class="title">Привет, это страница про сессии с терапевтом</h1>
+        <section class="about">
+            <div class="container">
+                <h2 class="title">Что такое индивидуальные сессии</h2>
+                <div class="about__inner">
+                    <div class="about__inner">
+                        <div class="about__inner--item">
+                            <p class="text">Индивидуальная работа со специалистом от 40 минут до 2 часов в онлайн-режиме</p>
+                        </div>
+                        <div class="about__inner--item">
+                            <p class="text">Решение сложных психологических ситуаций</p>
+                        </div>
+                        <div class="about__inner--item">
+                            <p class="text">Исцеление глубинных травм</p>
+                        </div>
+                        <div class="about__inner--item">
+                            <p class="text">Быстрые и ощутимые результаты по коренному изменению жизни</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
+        <section class="table section">
+            <div class="container">
+                <h2 class="title">Как работают сессии</h2>
+                <div class="table__inner">
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Быстрая трансформация</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">За несколько сессий решаются ситуации, устранение которых обычными психотерапевтическими методами может продолжаться годами</p>
+                        </div>
+                    </div>
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Безопасность</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">Минимальное вмешательство в личное пространство. Не нужно глубоко раскрывать душу, вспоминать и рассказывать неприятные подробности</p>
+                        </div>
+                    </div>
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Глубокая проработка</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">Открывается истинная причина переживаний, о которой вы могли даже не догадываться, не помнить, не осознавать</p>
+                        </div>
+                    </div>
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Ощутимый результат</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">После сессии вы чувствуете физическое и эмоциональное ощущение лёгкости  и освобождения</p>
+                        </div>
+                    </div>
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Долгосрочный эффект</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">Методы не просто меняют шаблонное поведение на эффективное, но и закрепляют этот результат на будущее</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="people section">
+            <div class="container">
+                <h2 class="title">Терапевты центра</h2>
+                <div class="people__inner">
+                    <div class="people__inner--item">
+                        <img src="img/people/Ellipse 10.png" alt="Марианна Максименко">
+                        <p class="text text--white">Марианна Максименко</p>
+                    </div>
+                    <div class="people__inner--item">
+                        <img src="img/people/Ellipse 11.png" alt="Екатерина Хмелькова">
+                        <p class="text">Екатерина Хмелькова</p>
+                    </div>
+                    <div class="people__inner--item">
+                        <img src="img/people/Ellipse 12.png" alt="Елена Белова">
+                        <p class="text text--white">Елена Белова</p>
+                    </div>
+                    <div class="people__inner--item">
+                        <img src="img/people/Ellipse 13.png" alt="Марина Шабалина">
+                        <p class="text text--white">Марина Шабалина</p>
+                    </div>
+                    <div class="people__inner--item">
+                        <img src="img/people/Ellipse 14.png" alt="Жанна аговеева">
+                        <p class="text">Жанна Баговеева</p>
+                    </div>
+                    <div class="people__inner--item">
+                        <img src="img/people/Ellipse 15.png" alt="Ирина Арсеньева">
+                        <p class="text text--white">Ирина Арсеньева</p>
+                    </div>
+                    <div class="people__inner--item">
+                        <img src="img/people/Ellipse 16.png" alt="Юлия Котляр">
+                        <p class="text text--white">Юлия Котляр</p>
+                    </div>
+                    <div class="people__inner--item">
+                        <img src="img/people/Ellipse 17.png" alt="Ирина Авдеева">
+                        <p class="text">Ирина Авдеева</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="review section">
+            <div class="container">
+                <h2 class="title">Отзывы о сессиях</h2>
+                <div class="review__inner">
+                    <div class="review__inner--item item">
+                        <div class="review__inner--item__body">
+                            <p class="subtitle">О Марианне Максименко</p>
+                            <p class="text review__text">
+                                Результативность скайп-сессий с Марианной словами описать трудно: столько заноз из меня повытаскивали за час работы!!! Появилось осознание ряда моментов своей жизни и, как следствие, внутреннее спокойствие, уравновешенность и ощущение, что моя "внутренняя чашечка" становится все более целостной и здоровой.
+                            </p>
+                            <div class="review__inner--item__person">
+                                <img src="img/review/Ellipse 18.png" alt="Раиса Карась">
+                                <p class="text text--grey text--bold">Раиса Карась</p>
+                            </div>
+                        </div>
+                        <div class="review__inner--item__bottom">
+                            <a href="#" class="button button--green review__button">Все отзывы о Марианне<svg><use href="sprite.svg#arrow"></use></svg></a>
+                        </div>
+                    </div>
+                    <div class="review__inner--item item">
+                        <div class="review__inner--item__body">
+                            <p class="subtitle">О Екатерине Хмельковой</p>
+                            <p class="text review__text">
+                                У Екатерины удивительный дар, мгновенно увидеть корень проблемы и мягко подвести к ее решению. За два часа удалось расплести несколько клубков и еще получить задел на дальнейшее саморазвитие. Я получила долгожданное освобождение от мучивших меня проблем и практические советы.
+                            </p>
+                            <div class="review__inner--item__person">
+                                <img src="img/review/Ellipse 19.png" alt="Раиса Карась">
+                                <p class="text text--grey text--bold">Елена Калашникова</p>
+                            </div>
+                        </div>
+                        <div class="review__inner--item__bottom">
+                            <a href="#" class="button button--green review__button">Все отзывы о Екатерине<svg><use href="sprite.svg#arrow"></use></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="table section method">
+            <div class="container">
+                <h2 class="title">Какие методы применяются</h2>
+                <div class="table__inner">
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Метафорические карты</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">Работают с подсознанием и и выводят вас на самую суть проблемы. Вы прорабатываете её глубже и быстрее, чем другими методами.</p>
+                        </div>
+                    </div>
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Вселенская терапия Тальписа</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">Метод даёт возможность сразу попасть в самую суть вопроса, используя ресурсы самого человека.</p>
+                        </div>
+                    </div>
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Психоэмоциональная акупрессурная терапия</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">Очищает мозг от негативных эмоций и открывает истинную причину проблем. 
+                                Помогает достигнуть осознанности, целостности.</p>
+                        </div>
+                    </div>
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Символическое моделирование</p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">Строится на том, что ответы на все вопросы находятся в самом человеке. 
+                                Помогает лучше разобраться в себе, своих чувствах, эмоциях, событиях и ситуациях.</p>
+                        </div>
+                    </div>
+                    <div class="table__inner--line">
+                        <div class="table__inner--item">
+                            <p class="subtitle">Терапия отправных точек </p>
+                        </div>
+                        <div class="table__inner--item">
+                            <p class="text">Открывает первопричину трудностей и налаживает жизнь в различных сферах - здоровье, семья, бизнес, финансы, отношения и пр.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="question">
+            <div class="container">
+                <h2 class="title text--white">Какие запросы решаются на сессиях</h2>
+                <div class="question__inner">
+                    <div class="question__item">
+                        <div class="question__item--header">
+                            <p class="subtitle">Родитель/Взрослый/Ребенок</p>
+                            <button class="open svg--rotate"><span></span></button>
+                        </div>
+                        <div class="question__item--body">
+                            <div class="question__item--body__text">
+                                <p class="text text--question">При исцелении внутреннего ребенка появляется радость жизни, желание творить, позитивный взгляд на жизнь.</p>
 
+                                <p class="text text--question">При исцелении внутреннего родителя снимается избыточный контроль, уходит тяжесть, желание заставлять других жить по своей указке.</p>
+                                    
+                                <p class="text">При исцелении внутреннего взрослого появляется баланc между «хочу» и «надо», между избыточной ответственностью родителя и свободой проявления детской непосредственности.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item--header">
+                            <p class="subtitle">Внутренние мужчина и женщина</p>
+                            <button class="open svg--rotate"><span></span></button>
+                        </div>
+                        <div class="question__item--body">
+                            <div class="question__item--body__text">
+                                <p class="text text--question">При исцелении внутреннего ребенка появляется радость жизни, желание творить, позитивный взгляд на жизнь.</p>
+
+                                <p class="text text--question">При исцелении внутреннего родителя снимается избыточный контроль, уходит тяжесть, желание заставлять других жить по своей указке.</p>
+                                    
+                                <p class="text">При исцелении внутреннего взрослого появляется баланc между «хочу» и «надо», между избыточной ответственностью родителя и свободой проявления детской непосредственности.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item--header">
+                            <p class="subtitle">Нарушения структуры в роду</p>
+                            <button class="open svg--rotate"><span></span></button>
+                        </div>
+                        <div class="question__item--body">
+                            <div class="question__item--body__text">
+                                <p class="text text--question">При исцелении внутреннего ребенка появляется радость жизни, желание творить, позитивный взгляд на жизнь.</p>
+
+                                <p class="text text--question">При исцелении внутреннего родителя снимается избыточный контроль, уходит тяжесть, желание заставлять других жить по своей указке.</p>
+                                    
+                                <p class="text">При исцелении внутреннего взрослого появляется баланc между «хочу» и «надо», между избыточной ответственностью родителя и свободой проявления детской непосредственности.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item--header">
+                            <p class="subtitle">Работа с деньгами</p>
+                            <button class="open svg--rotate"><span></span></button>
+                        </div>
+                        <div class="question__item--body">
+                            <div class="question__item--body__text">
+                                <p class="text text--question">При исцелении внутреннего ребенка появляется радость жизни, желание творить, позитивный взгляд на жизнь.</p>
+
+                                <p class="text text--question">При исцелении внутреннего родителя снимается избыточный контроль, уходит тяжесть, желание заставлять других жить по своей указке.</p>
+                                    
+                                <p class="text">При исцелении внутреннего взрослого появляется баланc между «хочу» и «надо», между избыточной ответственностью родителя и свободой проявления детской непосредственности.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item--header">
+                            <p class="subtitle">Работа по индивидуальному запросу</p>
+                            <button class="open svg--rotate"><span></span></button>
+                        </div>
+                        <div class="question__item--body">
+                            <div class="question__item--body__text">
+                                <p class="text text--question">При исцелении внутреннего ребенка появляется радость жизни, желание творить, позитивный взгляд на жизнь.</p>
+
+                                <p class="text text--question">При исцелении внутреннего родителя снимается избыточный контроль, уходит тяжесть, желание заставлять других жить по своей указке.</p>
+                                    
+                                <p class="text">При исцелении внутреннего взрослого появляется баланc между «хочу» и «надо», между избыточной ответственностью родителя и свободой проявления детской непосредственности.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="results">
+            <div class="container">
+                <h2 class="title">Три главных результата</h2>
+                <div class="results__inner">
+                    <div class="results__inner--item item">
+                        <p class="text text--bold text--results">1. Проработка ведется на трех уровнях - мысли, чувства, инстинкты.</p>
+                        <p class="text text--results">Параллельно снимается запрет на появление тех или иных чувств, уходят перепады настроения и депрессии, улучшается общее самочувствие, приходит ощущение счастья и гармонии.</p>
+                        <p class="text text--bold text--results">2. Происходит «прочистка» телесных реакций, которые не позволяют выйти из сценария</p>
+                        <p class="text text--results">Исчезает шаблонное поведение. Вы начинаете реагировать на происходящие события правильно и с пользой для себя.</p>
+                        <p class="text text--bold text--results">3. Ускоряются жизненные перемены, притягиваются положительные события, уходят препятствия.</p>
+                        <p class="text text--results">Вам становится проще получать желаемое и достигать поставленных целей.</p>
+                    </div>
+                    <div class="results__inner--item">
+                        <img src="img/results/result-img.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="buy">
+            <div class="container">
+                <h2 class="title">Для тех, кто готов проработать серьезные запросы</h2>
+                <div class="swiper buy__inner">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </div>
+    <div class="cauch__page" id="cauch">
+        <section class="help">
+            <div class="container">
+                <h2 class="title">Определите, что вам важно сейчас, и выбирайте подходящий способ работы </h2>
+                <div class="help__inner">
+                    <div class="help__inner--item item">
+                        <div class="item__inner--help">
+                            <ul class="list list__help">
+                                <li class="list__item text">Обрести радость жизни</li>
+                                <li class="list__item text">Наладить отношения с родителями</li>
+                                <li class="list__item text">Разрешить конфликты в семье или с партнером</li>
+                                <li class="list__item text">Понять себя и свои эмоции, научиться их проживать</li>
+                                <li class="list__item text">Избавиться от обиды, вины, неприятных воспоминаний</li>
+                                <li class="list__item text">Разобраться, что мешает жить так, как хочется</li>
+                            </ul>
+                            <p class="text text--bold">Помогут индивидуальные сессии</p>
+                        </div>
+                        <div class="item__inner--help__bottom">
+                            <a href="#" class="button button--pink text--center">Пройти сессию с терапевтом</a>
+                        </div>
+                    </div>
+                    <div class="help__inner--item item">
+                        <div class="item__inner--help">
+                            <ul class="list list__help">
+                                <li class="list__item text">Определиться с профессией</li>
+                                <li class="list__item text">Успешно пройти обучение</li>
+                                <li class="list__item text">Получить повышение на работе</li>
+                                <li class="list__item text">Разобраться с бизнес-целями</li>
+                                <li class="list__item text">Увеличить доходы, повысить заработок</li>
+                                <li class="list__item text">Получить конкретный результат в личной жизни (выйти замуж, встретить достойного спутника и т.п.)</li>
+                            </ul>
+                            <p class="text text--bold">Поможет коучинг</p>
+                        </div>
+                        <div class="item__inner--help__bottom">
+                            <a href="#" class="button button--green text--center">Пройти сессию с коучем</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__inner">
+                    <div class="about__inner--item about__inner--item__cauch">
+                        <p class="title">В коучинге мы</p>
+                    </div>
+                    <div class="about__inner--item item">
+                        <p class="text">Работаем с настоящим и будущим</p>
+                    </div>
+                    <div class="about__inner--item item">
+                        <p class="text">Ставим цели и получаем поддержку в их достижении</p>
+                    </div>
+                    <div class="about__inner--item item">
+                        <p class="text">Ищем и находим собственный путь</p>
+                    </div>
+                    <div class="about__inner--item item">
+                        <p class="text">Раскрываем таланты и способности</p>
+                    </div>
+                    <div class="about__inner--item item">
+                        <p class="text">Развиваем навыки и осознанность</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="results ">
+            <div class="container">
+                <h2 class="title">Как работает коучинг</h2>
+                <div class="results__inner results__inner--how">
+                    <div class="results__inner--item item">
+                        <p class="text text--results"><span class="text--bold">К коучу обращаются,</span> когда хотят улучшить качество жизни, добиться персонального или профессионального роста, начать действовать успешно и эффективно.</p>
+                        <p class="text text--results"><span class="text--bold">Коуч помогает</span> понять ресурсы, увидеть возможности, составить конкретный план по достижению цели и делать шаги по его исполнению.</p>
+                        <p class="text"><span class="text--bold">Цель коучинга</span> – получение измеримых результатов в разных сферах жизни без глубокого погружения в прошлое.</p>
+                    </div>
+                    <div class="results__inner--item">
+                        <img src="img/cauch/cauch-how-img.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cauch-session section">
+            <div class="container">
+                <h2 class="title">Как проходит коуч-сессия</h2>
+                <div class="cauch-session__inner">
+                    <div class="cauch-session__inner--item item">
+                        <p class="text">В процессе работы коуч задает вопросы, которые помогают вам раскрыть проблему и определить стратегию ее решения. </p>
+                    </div>
+                    <div class="cauch-session__inner--item item">
+                        <p class="text">Коуч не дает готовых ответов и советов. Они уже есть у вас внутри. Он помогает их обнаружить с помощью специальных техник и методов. </p>
+                    </div>
+                    <div class="cauch-session__inner--item item">
+                        <p class="text">В результате вы начинаете понимать, что нужно сделать, чтобы получить то, чего вам хочется. Перестаете ждать, сомневаться, откладывать на потом и начинаете действовать!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cauch-autor section">
+            <div class="container">
+                <h2 class="title">Кто ведет коуч-сессии</h2>
+                <div class="cauch-autor__inner">
+                    <div class="cauch-autor__inner--item">
+                        <p class="subtitle">Анастасия Тарасова – сертифицированный коуч </p>
+                        <ul class="list list__cauch-autor">
+                            <li class="list__item">
+                                <p class="text"><span class="text--bold">Педагогическое</span> образование</p>
+                            </li>
+                            <li class="list__item">
+                                <p class="text"><span class="text--bold">Куратор</span> обучающих курсов Вадима Куркина с 2016 года</p>
+                            </li>
+                            <li class="list__item">
+                                <p class="text"><span class="text--bold">Сертифицированный лайф-коуч</span> с 2017 года (ICU – международный союз коучей)</p>
+                            </li>
+                            <li class="list__item">
+                                <p class="text"><span class="text--bold">Повышение квалификации</span> в 2021 году (ICF – международная федерация коучинга)</p>
+                            </li>
+                            <li class="list__item">
+                                <p class="text"><span class="text--bold">Опыт проведения</span> коуч-сессий – 5 лет</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cauch-autor__inner--item">
+                        <img src="img/cauch/cauch-autor-img.jpg" alt="Анастасия Тарасова">
+                    </div>
+                </div>
+                <div class="cauch-autor__quote">
+                    <p class="text text--italic">«У каждого человека есть все необходимые ресурсы для того, чтобы ощущать себя реализованным в значимых сферах жизни, и задача только в том – чтобы их обнаружить и эффективно применить в движении к своим целям. Коучинг – самый подходящий для этого инструмент»</p>
+                </div>
+            </div>
+        </section>
+        <section class="request">
+            <div class="container">
+                <h2 class="title title--request">С какими запросами работает коуч</h2>
+                <div class="request__inner">
+                    <div class="request__inner--item">
+                        <img src="img/cauch/cauch-request-img.svg" alt="">
+                    </div>
+                    <div class="request__inner--item">
+                        <div class="request__item">
+                            <p class="text">Раскрытие и реализация ваших собственных (скрытых и явных) умений, талантов и способностей</p>
+                        </div>
+                        <div class="request__item">
+                            <p class="text">Достижение конкретных целей в профессии, в семье, в творчестве, в отношениях с людьми и т.д.</p>
+                        </div>
+                        <div class="request__item">
+                            <p class="text">Формирование новых стратегий поведения</p>
+                        </div>
+                        <div class="request__item">
+                            <p class="text">Более эффективное и быстрое продвижение к желаемому (для тех, кто ценит свое время)</p>
+                        </div>
+                        <div class="request__item">
+                            <p class="text">Преодоление лени, прокрастинации, страхов и сомнений (когда знаешь, чего хочешь и что для этого нужно сделать, но не начинаешь)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="review section">
+            <div class="container">
+                <h2 class="title">Отзывы о коуче</h2>
+                <div class="review__inner">
+                    <div class="review__inner--item item">
+                        <div class="review__inner--item__body">
+                            <p class="subtitle">О Марианне Максименко</p>
+                            <p class="text review__text">
+                                Результативность скайп-сессий с Марианной словами описать трудно: столько заноз из меня повытаскивали за час работы!!! Появилось осознание ряда моментов своей жизни и, как следствие, внутреннее спокойствие, уравновешенность и ощущение, что моя "внутренняя чашечка" становится все более целостной и здоровой.
+                            </p>
+                            <div class="review__inner--item__person">
+                                <img src="img/review/Ellipse 18.png" alt="Раиса Карась">
+                                <p class="text text--grey text--bold">Раиса Карась</p>
+                            </div>
+                        </div>
+                        <div class="review__inner--item__bottom">
+                            <a href="#" class="button button--green review__button">Все отзывы о Марианне<svg><use href="sprite.svg#arrow"></use></svg></a>
+                        </div>
+                    </div>
+                    <div class="review__inner--item item">
+                        <div class="review__inner--item__body">
+                            <p class="subtitle">О Екатерине Хмельковой</p>
+                            <p class="text review__text">
+                                У Екатерины удивительный дар, мгновенно увидеть корень проблемы и мягко подвести к ее решению. За два часа удалось расплести несколько клубков и еще получить задел на дальнейшее саморазвитие. Я получила долгожданное освобождение от мучивших меня проблем и практические советы.
+                            </p>
+                            <div class="review__inner--item__person">
+                                <img src="img/review/Ellipse 19.png" alt="Раиса Карась">
+                                <p class="text text--grey text--bold">Елена Калашникова</p>
+                            </div>
+                        </div>
+                        <div class="review__inner--item__bottom">
+                            <a href="#" class="button button--green review__button">Все отзывы о Екатерине<svg><use href="sprite.svg#arrow"></use></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cauch-results">
+            <div class="container">
+                <h2 class="title">Результат коуч-сессии</h2>
+                <div class="cauch-results__inner">
+                    <div class="cauch-results__inner--item item">
+                        <p class="text">В процессе сессии происходит осознание, что вам мешает, а что помогает двигаться к цели</p>
+                    </div>
+                    <div class="cauch-results__inner--item item">
+                        <p class="text">Сразу после сессии вы понимаете конкретные шаги, которые можно сделать уже сейчас	</p>
+                    </div>
+                    <div class="cauch-results__inner--item item">
+                        <p class="text">В конечном итоге вы решаете поставленные задачи и приходите к тому, к чему стремились</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cauch-buy">
+            <div class="container">
+                <div class="cauch-buy__inner">
+                    <h2 class="title">Записаться на коуч-сессию</h2>
+                    <div class="cauch-buy__inner--item">
+                        <p class="title">8 000 ₽</p>
+                        <a href="#" class="button button--green button--buy">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -68,23 +629,43 @@
             });
         });
     </script>
-
-<script>
-    $(document).ready(function(){
-      $("a").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-    
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 900, function(){
-    
-            window.location.hash = hash;
-          });
-        } 
-      });
-    });
+    <script>
+        $(document).ready(function(){
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+        
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 900, function(){
+        
+                window.location.hash = hash;
+            });
+            } 
+        });
+        });
     </script> 
+    <script>
+        $(document).ready(function() {
+           $(".question__item--header").click(function() {
+            $(this).next($(".text--program")).slideToggle(300);
+            $(this).find('.open').toggleClass('open--rotate');
+            $(this).find('.open--active').toggleClass('open--active--rotate');
+           })
+        });
+    </script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+        });
+
+    </script>
 </body>
 </html>
