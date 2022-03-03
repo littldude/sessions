@@ -22,7 +22,7 @@
         <div class="container">
             <div class="intro__inner">
                 <div class="intro__inner--item">
-                    <a href="#therapy__page" class="intro__link title">сессия<br> с терапевтом</a>
+                    <a href="#therapy__page" class="intro__link title" id="therapy">сессия<br> с терапевтом</a>
                     <p class="subtitle text--white">Достижение целей</p>
                     <ul class="intro__list">
                         <li class="intro__list--item text text--white">в работе и карьере</li>
@@ -32,7 +32,7 @@
                     </ul>
                 </div>
                 <div class="intro__inner--item">
-                    <a href="#cauch__page" class="intro__link title">сессия<br> с коучем</a>
+                    <a href="#cauch__page" class="intro__link title" id="cauch">сессия<br> с коучем</a>
                     <p class="subtitle text--white">Исцеление травм</p>
                     <ul class="intro__list">
                         <li class="intro__list--item text text--white">в отношениях с людьми</li>
@@ -90,16 +90,16 @@
                 <h2 class="title">Что такое индивидуальные сессии</h2>
                 <div class="about__inner">
                     <div class="about__inner">
-                        <div class="about__inner--item">
+                        <div class="about__inner--item item">
                             <p class="text">Индивидуальная работа со специалистом от 40 минут до 2 часов в онлайн-режиме</p>
                         </div>
-                        <div class="about__inner--item">
+                        <div class="about__inner--item item">
                             <p class="text">Решение сложных психологических ситуаций</p>
                         </div>
-                        <div class="about__inner--item">
+                        <div class="about__inner--item item">
                             <p class="text">Исцеление глубинных травм</p>
                         </div>
-                        <div class="about__inner--item">
+                        <div class="about__inner--item item">
                             <p class="text">Быстрые и ощутимые результаты по коренному изменению жизни</p>
                         </div>
                     </div>
@@ -391,7 +391,7 @@
             </div>
         </section>
     </div>
-    <div class="cauch__page" id="cauch">
+    <div class="cauch__page" id="cauch__page">
         <section class="help">
             <div class="container">
                 <h2 class="title">Определите, что вам важно сейчас, и выбирайте подходящий способ работы </h2>
@@ -618,13 +618,14 @@
         $(document).ready(function($) {
             $('.intro__link').on("click",function(event) {
                 let key = event.target.id;
-                if (key == 'cauch') {
-                    document.getElementById('cauch__page').style.display = 'block';
-                    document.getElementById('therapy__page').style.display = 'none';
+                console.log(key)
+                if (key == 'therapy') {
+                    document.getElementById('cauch__page').style.display = 'none';
+                    document.getElementById('therapy__page').style.display = 'block';
                 } 
                 else {
-                    document.getElementById('therapy__page').style.display = 'block';
-                    document.getElementById('cauch__page').style.display = 'none';
+                    document.getElementById('therapy__page').style.display = 'none';
+                    document.getElementById('cauch__page').style.display = 'block';
                 }
             });
         });
@@ -655,7 +656,7 @@
            })
         });
     </script>
-    <script>
+    <!-- <script>
         const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
@@ -666,6 +667,6 @@
         }
         });
 
-    </script>
+    </script> -->
 </body>
 </html>

@@ -17,9 +17,6 @@ h1,h2,h3,h4,h5,p,ul,li {
     margin: 0;
     padding: 0;
 }
-li {
-    list-style: none;
-}
 a {
     text-decoration: none;
 }
@@ -61,7 +58,7 @@ a {
 }
 #therapy__page {
     display: none;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 .open {
     display: flex;
@@ -162,16 +159,6 @@ a {
         margin-bottom: 15px;
         display: flex;
         align-items: center;
-        &::before {
-            content: '';
-            display: flex;
-            flex: 0 0 auto;
-            width: 5px;
-            height: 5px;
-            border-radius: 100%;
-            background-color: $dark;
-            margin-right: 10px;
-        }
         &:last-child {
             margin-bottom: 0;
         }
